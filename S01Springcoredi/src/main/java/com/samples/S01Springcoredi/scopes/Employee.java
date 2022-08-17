@@ -1,4 +1,5 @@
-package com.samples.S01Springcoredi;
+package com.samples.S01Springcoredi.scopes;
+
 import org.springframework.beans.factory.annotation.Required;
 
 public class Employee {
@@ -32,5 +33,6 @@ public class Employee {
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", address=" + address + "]";
 	}
+
 
 }
