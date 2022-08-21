@@ -16,7 +16,7 @@ public class App {
 		Employee emp1 = (Employee) springContainer.getBean("emp");
 		System.out.println(emp1.hashCode());
 		
-		Employee emp2 = (Employee) springContainer.getBean("emp2");
+		Employee emp2 = (Employee) springContainer.getBean("emp");
 		System.out.println(emp2.hashCode());
 	}
 }

@@ -26,10 +26,17 @@
 		</constructor-arg>
 	</bean>
 	-->	
+	  <bean name="emp"
+		class="com.samples.S01Springcoredi.constructor.Employee">
+		<constructor-arg value="8" />
+		<constructor-arg value="kavi" />
+		<constructor-arg ref="address" />
+		</bean>
+	<!-- 
 		<bean name="emp" class="com.samples.S01Springcoredi.constructor.Employee" 
 		 c:id="8" c:name="nandhu" c:address-ref="address" >
 </bean>
-
+ -->
 	<context:annotation-config />
 
 	</beans>
