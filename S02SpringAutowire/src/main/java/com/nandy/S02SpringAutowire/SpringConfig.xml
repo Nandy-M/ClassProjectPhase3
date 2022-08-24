@@ -7,7 +7,44 @@
  http://www.springframework.org/schema/beans/spring-beans.xsd
  http://www.springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+ <!-- 1.method of refer another class bean 
+ <bean name="addressNy" class="com.nandy.S02SpringAutowire.model.Address"
+		p:houseNumber="123" p:street="main street" p:city="NY" />
+ 
+ <bean name="emp" class="com.nandy.S02SpringAutowire.model.Employee"
+		p:id="22" p:name="John" p:address-ref="addressNy"/>
+ -->
+ 
+<!-- 2.method:using autowire by type : It sees the type of address variable and search in container
 
+<bean name="addressNy" class="com.nandy.S02SpringAutowire.model.Address"
+		p:houseNumber="123" p:street="main street" p:city="NY" />
+ 
+ <bean name="emp" class="com.nandy.S02SpringAutowire.model.Employee"
+		p:id="22" p:name="John" autowire="byType"/>
+-->
+<!-- 3.method:using autowire by Name : It sees the name of address class and search in container
+  
+  <bean name="address" class="com.nandy.S02SpringAutowire.model.Address"
+		p:houseNumber="123" p:street="main street" p:city="NY" />
+ 
+ <bean name="emp" class="com.nandy.S02SpringAutowire.model.Employee"
+		p:id="22" p:name="John" autowire="byName"/>
+-->
+
+<!-- 4.method:using autowire by Constructor : It gets the value by constructor without set method
+        default autowire by constructor
+  
+  <bean name="add" class="com.nandy.S02SpringAutowire.model.Address"
+		p:houseNumber="123" p:street="main street" p:city="NY" />
+ 
+ <bean name="emp" class="com.nandy.S02SpringAutowire.model.Employee"
+		p:id="22" p:name="John" autowire="constructor" />
+
+-->
+
+ 
 	<context:annotation-config />
 
 	<bean name="addressNy" class="com.nandy.S02SpringAutowire.model.Address"

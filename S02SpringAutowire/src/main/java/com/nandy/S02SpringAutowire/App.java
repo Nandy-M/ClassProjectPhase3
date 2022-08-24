@@ -1,6 +1,5 @@
 package com.nandy.S02SpringAutowire;
 
-import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.nandy.S02SpringAutowire.model.Employee;

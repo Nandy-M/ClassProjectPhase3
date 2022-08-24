@@ -15,7 +15,7 @@
 	<context:component-scan
 		base-package="com.nandy.S03StereotypeAnnotations.model" />
 
-	<util:list list-class="java.util.LinkedList" id="mytopics">
+ 	<util:list list-class="java.util.LinkedList" id="mytopics">
 		<value>Core Java</value>
 		<value>Java Servlets</value>
 		<value>PHP</value>

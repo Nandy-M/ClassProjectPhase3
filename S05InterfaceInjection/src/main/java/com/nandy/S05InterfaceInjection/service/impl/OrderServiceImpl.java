@@ -1,6 +1,7 @@
 package com.nandy.S05InterfaceInjection.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
@@ -12,7 +13,7 @@ public class OrderServiceImpl implements OrderService {
 
 	@Autowired
 	@Qualifier("dao")
-	private OrderDAO orderDAO;//springframework only to create a class and create new for it in springconfig
+	private OrderDAO orderDAO;//springframework only to create a class and create new() for it in springconfig
 
 	public OrderDAO getOrderDAO() {
 		return orderDAO;

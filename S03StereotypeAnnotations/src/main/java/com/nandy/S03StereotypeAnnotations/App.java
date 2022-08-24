@@ -2,7 +2,9 @@ package com.nandy.S03StereotypeAnnotations;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+
 import com.nandy.S03StereotypeAnnotations.model.Instructor;
+import com.nandy.S03StereotypeAnnotations.model.Patient;
 
 
 
@@ -19,6 +21,9 @@ public class App {
 
 		Instructor inst = (Instructor) springContainer.getBean("inst");
 		System.out.println(inst);
+		
+		Patient patient = (Patient) springContainer.getBean("patient");
+		System.out.println(patient);
 
 
 	}

@@ -31,6 +31,8 @@ public class App
 		OrderService service = (OrderService) springContainer.getBean("orderservice");
 		System.out.println(service);
 		service.placeOrder();
+		
+		//OrderDAO obj=new OrderDAOImpl();  this process based on this implementaion ...
 
 	}
 }

@@ -13,6 +13,13 @@
 	
 	<bean name="service" class="com.nandy.S05InterfaceInjection.service.impl.OrderServiceImpl">
 		<property name="orderDAO" ref="dao" />
+	
+	<bean name="dao" class="com.nandy.S05InterfaceInjection.DAO.impl.OrderDAOImplV2" />
+	
+	<bean name="service" class="com.nandy.S05InterfaceInjection.service.impl.OrderServiceImpl">
+		<property name="orderDAO" ref="daov2" />
+	
+	
 	</bean>
 -->
 

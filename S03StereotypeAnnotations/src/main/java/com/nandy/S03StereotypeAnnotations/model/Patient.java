@@ -2,6 +2,7 @@ package com.nandy.S03StereotypeAnnotations.model;
 
 import org.springframework.stereotype.Component;
 
+@Component
 public class Patient {
 
 	private int id;
@@ -23,13 +24,6 @@ public class Patient {
 	public String toString() {
 		return "Patient [id=" + id + "]";
 	}
-	
-	public void methodOne() {
-		System.out.println("Inside methodOne");
-	}
-	
-	public void methodTwo() {
-		System.out.println("Inside methodTwo");
-	}
+
 	
 }

@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component("inst")
-@Scope("singleton")
+@Scope("singleton")  //every get bean will give new instance
 public class Instructor {
 	
 	@Value("11")
