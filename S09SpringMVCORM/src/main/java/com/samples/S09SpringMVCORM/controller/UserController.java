@@ -1,5 +1,7 @@
 package com.samples.S09SpringMVCORM.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
@@ -13,24 +15,29 @@ import com.samples.S09SpringMVCORM.service.UserService;
 
 @Controller
 public class UserController {
-
+	
 	@Autowired
 	private UserService userService;
 
 	@RequestMapping("/register")
-	public String showRegistrationPage() {
+	public String showRegistrationPage(ModelMap model) {
+		model.addAttribute("users", userService.getUsers());
 		return "userreg";
 	}
 
 	@RequestMapping(value = "/registeruser", method = RequestMethod.POST)
 	public String registerUser(@ModelAttribute("user") User user, ModelMap model) {
-
 		int id = userService.save(user);
-		
 		model.addAttribute("result", "User created with Id: " + id);
-
+		model.addAttribute("users", userService.getUsers());
 		return "userreg";
-
+	}
+	
+	@RequestMapping("/users")
+	public String getUsers(ModelMap model) {
+		List<User> users = userService.getUsers();
+		model.addAttribute("users", users);
+		return "userdisplay";
 	}
 
 }

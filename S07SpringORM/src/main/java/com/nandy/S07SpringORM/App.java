@@ -26,13 +26,13 @@ public class App {
 //
 //		productDAO.create(product);
 
-		create(productDAO);
+     //   create(productDAO);
 
-		update(productDAO);
+	//	update(productDAO);
 
-		delete(productDAO);
+	//	delete(productDAO);
 
-		findProduct(productDAO, 1);
+	//	findProduct(productDAO, 1);
 
 		findAll(productDAO);
 	}
